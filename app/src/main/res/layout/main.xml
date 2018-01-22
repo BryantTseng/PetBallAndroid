@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_vertical"
-    android:orientation="vertical" >
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    android:layout_width="fill_parent"
+
+    android:layout_height="fill_parent" >
+
+    <org.freedesktop.gstreamer.tutorials.tutorial_3.GStreamerSurfaceView
+        android:id="@+id/surface_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal" />
     <TextView
         android:id="@+id/textview_message"
         android:layout_width="match_parent"
@@ -17,7 +22,8 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dip"
         android:gravity="center_horizontal"
-        android:orientation="horizontal" >
+        android:orientation="horizontal"
+        android:id="@+id/linearLayout">
 
         <ImageButton
             android:id="@+id/button_play"
@@ -36,10 +42,51 @@
             android:text="@string/button_stop" />
     </LinearLayout>
 
-    <org.freedesktop.gstreamer.tutorials.tutorial_3.GStreamerSurfaceView
-        android:id="@+id/surface_video"
+    <Button
+        android:id="@+id/up_Button"
+
+        android:layout_width="86dp"
+
+        android:layout_height="54dp"
+        android:layout_alignLeft="@+id/down_Button"
+        android:layout_centerVertical="true"
+        android:text="up" />
+
+    <Button
+        android:id="@+id/down_Button"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:layout_above="@+id/right_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="47dp"
+        android:layout_marginStart="17dp"
+        android:text="down" />
+
+    <Button
+        android:id="@+id/right_Button"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:layout_alignBottom="@+id/up_Button"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="51dp"
+        android:text="right" />
+
+    <Button
+        android:id="@+id/left_Button"
+        android:layout_width="86dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/down_Button"
+        android:layout_marginLeft="17dp"
+        android:layout_toRightOf="@+id/right_Button"
+        android:text="left" />
+
+    <TextView
+        android:id="@+id/text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical|center_horizontal" />
+        android:layout_alignBottom="@+id/up_Button"
+        android:layout_centerHorizontal="true"
+        android:text="Text" />
 
-</LinearLayout>
+
+</RelativeLayout>

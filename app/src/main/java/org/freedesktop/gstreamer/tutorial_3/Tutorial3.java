@@ -1,17 +1,27 @@
 package org.freedesktop.gstreamer.tutorials.tutorial_3;
 
 import android.app.Activity;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import org.freedesktop.gstreamer.GStreamer;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.HttpURLConnection;
+import java.net.URL;
 
 public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
     private native void nativeInit();     // Initialize native code, build pipeline, etc
@@ -25,11 +35,22 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
 
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
 
+    //control the patball direction
+    private Button up_button;
+    private Button left_button;
+    private Button down_button;
+    private Button right_button;
+    private TextView text;
+
+
     // Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         // Initialize GStreamer and warn if it fails
         try {
@@ -39,6 +60,47 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
             finish();
             return;
         }
+
+
+
+        text = findViewById(R.id.text);
+        up_button = findViewById(R.id.up_Button);
+        down_button = findViewById(R.id.down_Button);
+        left_button = findViewById(R.id.left_Button);
+        right_button = findViewById(R.id.right_Button);
+
+        up_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("call up");
+                new Background_get().execute("direction=1");
+            }
+
+        });
+        left_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("call down");
+                new Background_get().execute("direction=2");
+            }
+
+        });
+        down_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("call left");
+                new Background_get().execute("direction=3");
+            }
+
+        });
+        right_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                text.setText("call right");
+                new Background_get().execute("direction=4");
+            }
+
+        });
 
         setContentView(R.layout.main);
 
@@ -75,6 +137,37 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback {
         this.findViewById(R.id.button_stop).setEnabled(false);
 
         nativeInit();
+    }
+
+    /*****************************************************/
+       /*  This is a background process for connecting      */
+      /*   to the arduino server and sending               */
+     /*    the GET request withe the added data           */
+    /*****************************************************/
+
+    private class Background_get extends AsyncTask<String, Void, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            try {
+                /* Change the IP to the IP you set in the arduino sketch */
+                URL url = new URL("http://192.168.0.17/patball/?" + params[0]);
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+
+                BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
+                StringBuilder result = new StringBuilder();
+                String inputLine;
+                while ((inputLine = in.readLine()) != null)
+                    result.append(inputLine).append("\n");
+
+                in.close();
+                connection.disconnect();
+                return result.toString();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return null;
+        }
     }
 
     protected void onSaveInstanceState (Bundle outState) {

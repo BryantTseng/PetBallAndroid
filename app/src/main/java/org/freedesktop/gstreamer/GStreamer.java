@@ -9,6 +9,7 @@ import java.io.OutputStream;
 import android.content.Context;
 import android.content.res.AssetManager;
 
+
 public class GStreamer {
     private static native void nativeInit(Context context) throws Exception;
 
