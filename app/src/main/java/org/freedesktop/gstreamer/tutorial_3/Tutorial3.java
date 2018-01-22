@@ -1,16 +1,14 @@
 package org.freedesktop.gstreamer.tutorials.tutorial_3;
 
 import android.app.Activity;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.Button;
-import android.widget.ImageButton;
+//import android.widget.Button;
+//import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,6 +43,8 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             finish();
             return;
         }
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         setContentView(R.layout.main);
 
