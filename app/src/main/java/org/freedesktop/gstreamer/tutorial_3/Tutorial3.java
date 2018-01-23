@@ -3,12 +3,14 @@ package org.freedesktop.gstreamer.tutorials.tutorial_3;
 import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
 //import android.widget.Button;
 //import android.widget.ImageButton;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,6 +53,71 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         text = findViewById(R.id.text);
 
 
+
+        Button up = (Button)this.findViewById(R.id.up_Button);
+        up.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        new WebConnect().execute("go?direction=1");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        new WebConnect().execute("stop?direction=1");
+                        break;
+                }
+                return false;
+            }
+        });
+        Button down = (Button)this.findViewById(R.id.down_Button);
+        down.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        new WebConnect().execute("go?direction=2");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        new WebConnect().execute("stop?direction=2");
+                        break;
+                }
+                return false;
+            }
+        });
+        Button left = (Button)this.findViewById(R.id.left_Button);
+        left.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        new WebConnect().execute("go?direction=3");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        new WebConnect().execute("stop?direction=3");
+                        break;
+                }
+                return false;
+            }
+        });
+        Button right = (Button)this.findViewById(R.id.right_Button);
+        right.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                switch ( event.getAction() ) {
+                    case MotionEvent.ACTION_DOWN:
+                        new WebConnect().execute("go?direction=4");
+                        break;
+                    case MotionEvent.ACTION_UP:
+                        new WebConnect().execute("stop?direction=4");
+                        break;
+                }
+                return false;
+            }
+        });
+
+
+
+
 //        ImageButton play = (ImageButton) this.findViewById(R.id.button_play);
 //        play.setOnClickListener(new OnClickListener() {
 //            public void onClick(View v) {
@@ -90,22 +157,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
     public void click(View v){
         switch(v.getId()){
-            case R.id.up_Button:
-                text.setText("call up");
-                new WebConnect().execute("direction=1");
-                break;
-            case R.id.down_Button:
-                text.setText("call down");
-                new WebConnect().execute("direction=2");
-                break;
-            case R.id.left_Button:
-                text.setText("call left");
-                new WebConnect().execute("direction=3");
-                break;
-            case R.id.right_Button:
-                text.setText("call right");
-                new WebConnect().execute("direction=4");
-                break;
+
             case R.id.button_play:
                 is_playing_desired = true;
                 text.setText("call play");

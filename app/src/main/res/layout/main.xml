@@ -56,7 +56,7 @@
 
         <Button
             android:id="@+id/up_Button"
-            android:onClick="click"
+
             android:layout_width="86dp"
 
             android:layout_height="54dp"
@@ -64,21 +64,21 @@
 
         <Button
             android:id="@+id/down_Button"
-            android:onClick="click"
+
             android:layout_width="86dp"
             android:layout_height="54dp"
             android:text="down" />
 
         <Button
             android:id="@+id/right_Button"
-            android:onClick="click"
+
             android:layout_width="86dp"
             android:layout_height="54dp"
             android:text="right" />
 
         <Button
             android:id="@+id/left_Button"
-            android:onClick="click"
+
             android:layout_width="86dp"
             android:layout_height="54dp"
             android:text="left" />

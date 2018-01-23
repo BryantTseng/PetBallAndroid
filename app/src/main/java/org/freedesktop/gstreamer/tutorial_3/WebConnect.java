@@ -25,7 +25,7 @@ public class WebConnect extends AsyncTask<String, Void, String> {
     protected String doInBackground(String... params) {
         try {
             /* Change the IP to the IP you set in the arduino sketch */
-            URL url = new URL("http://192.168.0.17/patball/?" + params[0]);
+            URL url = new URL("http://10.42.0.159/command/" + params[0]);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
