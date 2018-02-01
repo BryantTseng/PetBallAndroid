@@ -152,7 +152,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         this.findViewById(R.id.button_play).setEnabled(false);
         this.findViewById(R.id.button_stop).setEnabled(false);
 
-        nativeInit();
+        //nativeInit();
     }
 
     public void click(View v){

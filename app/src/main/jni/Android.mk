@@ -7,7 +7,7 @@ LOCAL_SRC_FILES := tutorial-3.c
 LOCAL_SHARED_LIBRARIES := gstreamer_android
 LOCAL_LDLIBS := -llog -landroid
 include $(BUILD_SHARED_LIBRARY)
-GSTREAMER_ROOT_ANDROID := /home/bryant/Desktop/gst
+GSTREAMER_ROOT_ANDROID := /home/will/Desktop/petball/gstreamer1.12.4
 ifndef GSTREAMER_ROOT_ANDROID
 $(error GSTREAMER_ROOT_ANDROID is not defined!)
 endif
