@@ -23,13 +23,14 @@ public class LoginActivity extends Activity {
     }
 
     public void click(View v){
+        Intent intent = new Intent();
         switch(v.getId()){
 
             case R.id.login_button:
-                //setContentView(view2);
+                intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.TeachingActivity.class);
+                startActivity(intent);
                 break;
             case R.id.signup_button:
-                Intent intent = new Intent();
                 intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SignupActivity.class);
                 startActivity(intent);
                 break;

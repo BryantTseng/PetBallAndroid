@@ -23,7 +23,7 @@
             android:name=".Tutorial3"
             android:label="@string/app_name"
             android:screenOrientation="landscape"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"></activity>
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
         <activity android:name=".LoginActivity">
             <intent-filter>
@@ -33,7 +33,13 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".SignupActivity"></activity>
+        <activity android:name=".SignupActivity" >
+
+        </activity>
+
+        <activity android:name=".TeachingActivity">
+
+        </activity>
 
     </application>
 
