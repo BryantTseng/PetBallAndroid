@@ -1,39 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
 
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
 
     android:layout_height="fill_parent" >
 
 
     <LinearLayout
-        android:id="@+id/parentlayout"
+        android:background="@color/SignUp_backcolor"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageblock"
+            android:layout_width="match_parent"
+            android:layout_height="255dp"
+            android:src="@drawable/ntust" />
+
+        <LinearLayout
+            android:id="@+id/inputblock"
+            android:layout_width="match_parent"
+            android:layout_height="306dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/nickname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SignUp_textview_backcolor"
+                android:gravity="center_horizontal"
+                android:hint="暱稱"
+                android:textColorHint="@color/SignUp_textview_hinttextcolor"
+                android:textColor="@color/SignUp_textview_textcolor"
+
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SignUp_textview_backcolor"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="Email"
+                android:textColorHint="@color/SignUp_textview_hinttextcolor"
+                android:textColor="@color/SignUp_textview_textcolor"
+                android:inputType="textEmailAddress"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SignUp_textview_backcolor"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="密碼"
+                android:textColorHint="@color/SignUp_textview_hinttextcolor"
+                android:textColor="@color/SignUp_textview_textcolor"
+                android:inputType="textPassword"
+                android:layout_marginBottom="10dp"/>
+
+            <EditText
+                android:id="@+id/password_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/SignUp_textview_backcolor"
+                android:ems="10"
+                android:gravity="center_horizontal"
+                android:hint="確認密碼"
+                android:textColorHint="@color/SignUp_textview_hinttextcolor"
+                android:textColor="@color/SignUp_textview_textcolor"
+                android:inputType="textPassword" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonblock"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/SignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="註冊"
+                android:background="@color/SignUp_button_createaccount"/>
+
+            <Button
+                android:id="@+id/Nothing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Button"
+                android:background="@color/SignUp_button_login"/>
+        </LinearLayout>
     </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dip"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout"
-        android:layout_alignBottom="@+id/parentlayout">
-
-        <Button
-            android:id="@+id/next_button"
-            android:onClick="click"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="下一步" />
-
-
-
-
-    </LinearLayout>
-
 
 </RelativeLayout>
