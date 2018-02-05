@@ -2,9 +2,9 @@
 <items version="2" >
 
     <item
-        is-multidex="false"
-        jar="/home/bryant/.android/build-cache/fd58f0da9f75298a074a955089acdb57a0ff68d8/output/jars/classes.jar"
-        jumboMode="false"
+        is-multidex="true"
+        jar="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
         optimize="true"
         revision="27.0.3"
         sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">

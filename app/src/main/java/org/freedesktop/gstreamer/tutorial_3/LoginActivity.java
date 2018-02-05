@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import org.freedesktop.gstreamer.tutorials.tutorial_3.R;
@@ -26,6 +27,7 @@ public class LoginActivity extends Activity {
         //setContentView(R.layout.firstpage);
 
         setContentView(R.layout.activity_login);
+        cut_title();
     }
 
     public void click(View v){
@@ -43,5 +45,8 @@ public class LoginActivity extends Activity {
         }
     }
 
-
+    private void cut_title(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
 }

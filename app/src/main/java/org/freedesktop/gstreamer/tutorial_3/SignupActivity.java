@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.Button;
 
 public class SignupActivity extends Activity {
@@ -20,6 +21,7 @@ public class SignupActivity extends Activity {
 
         setContentView(sign_up_view);
 
+        cut_title();
 
         //Button button1 = findViewById(R.id.go_login_button);
     }
@@ -31,4 +33,10 @@ public class SignupActivity extends Activity {
 
         }
     }
+
+    private void cut_title(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+
 }
