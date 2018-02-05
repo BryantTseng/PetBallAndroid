@@ -12,15 +12,6 @@
     </item>
     <item
         is-multidex="false"
-        jar="/home/bryant/.android/build-cache/ab97f1bd93bdaa6dbeafb895ceb39c2f876f4e8d/output/jars/classes.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="27.0.3"
-        sha1="cd89d284f72723be959e5b6ab89a2bd5f9e46f7c">
-        <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_844e10fb927db6126e4a7d9d2819d9e58672a859/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
         jar="/home/bryant/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/26.0.0-alpha1/support-annotations-26.0.0-alpha1.jar"
         jumboMode="false"
         optimize="true"
@@ -63,6 +54,15 @@
         revision="27.0.3"
         sha1="47471eb19df288158b00b8d9cfa41bce7373f5cc">
         <dex dex="/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/pre-dexed/debug/classes_11cc1f2b19133fec6ad78b5a3a37a3ae850bd450.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/bryant/Desktop/PetBallAndroid/mysql-connector-java-5.1.45-bin/mysql-connector-java-5.1.45-bin.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="6223be933fbc8d81f819aacad0ce09346d5911c4">
+        <dex dex="/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/pre-dexed/debug/mysql-connector-java-5.1.45-bin_38dc105d44a378e3305cb2573c0b60034265ee7c.jar" />
     </item>
     <item
         is-multidex="false"
