@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="27.0.3"
-        sha1="53a4cb74c34d4278da91d8199b756c6362c05bbb">
+        sha1="cd89d284f72723be959e5b6ab89a2bd5f9e46f7c">
         <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_844e10fb927db6126e4a7d9d2819d9e58672a859/classes.dex" />
     </item>
 
