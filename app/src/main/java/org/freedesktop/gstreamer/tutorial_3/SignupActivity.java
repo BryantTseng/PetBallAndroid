@@ -27,9 +27,7 @@ public class SignupActivity extends Activity {
     public void click(View v){
         switch(v.getId()){
 
-            case R.id.next_button:
-                //setContentView(view2);
-                break;
+
 
         }
     }

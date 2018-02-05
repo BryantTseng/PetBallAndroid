@@ -18,8 +18,8 @@ public class LoginActivity extends Activity {
         super.onCreate(savedInstanceState);
         LayoutInflater inflater = (LayoutInflater)getSystemService(LAYOUT_INFLATER_SERVICE);
 
+        //setContentView(R.layout.firstpage);
         setContentView(R.layout.activity_login);
-
     }
 
     public void click(View v){
