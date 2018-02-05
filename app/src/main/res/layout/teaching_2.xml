@@ -15,7 +15,7 @@
             android:layout_width="40dip"
             android:layout_height="25dip"
             android:onClick="click"
-            android:background="#00000000"
+            android:background="@color/transparent"
             android:layout_margin="5dip"
             android:textColor="#B5B5B6"
             android:text="跳過" />

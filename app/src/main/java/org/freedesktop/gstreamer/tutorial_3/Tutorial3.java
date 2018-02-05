@@ -1,6 +1,7 @@
 package org.freedesktop.gstreamer.tutorials.tutorial_3;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -8,9 +9,10 @@ import android.view.SurfaceHolder;
 import android.view.SurfaceView;
 import android.view.View;
 import android.view.WindowManager;
-//import android.widget.Button;
 //import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.RelativeLayout;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -31,7 +33,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
 
     private TextView text ;
-
+    private RelativeLayout guide_page;
     // Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -45,15 +47,35 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             finish();
             return;
         }
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        cut_title();
 
         setContentView(R.layout.main);
 
         text = findViewById(R.id.text);
+        guide_page = findViewById(R.id.guide_page);
 
 
+        SurfaceView sv = (SurfaceView) this.findViewById(R.id.surface_video);
+        SurfaceHolder sh = sv.getHolder();
+        sh.addCallback(this);
 
+        if (savedInstanceState != null) {
+            is_playing_desired = savedInstanceState.getBoolean("playing");
+            Log.i ("GStreamer", "Activity created. Saved state is playing:" + is_playing_desired);
+        } else {
+            is_playing_desired = false;
+            Log.i ("GStreamer", "Activity created. There is no saved state, playing: false");
+        }
+
+        setGuideline();
+        ControlButtonSetting();
+        startStreaming();
+    }
+    private void cut_title(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
+    private void ControlButtonSetting(){
         Button up = (Button)this.findViewById(R.id.up_Button);
         up.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -114,59 +136,49 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 return false;
             }
         });
+    }
+    private void startStreaming(){
+        nativeInit();
+        is_playing_desired = true;
+        text.setText("call play");
+        //nativePlay();
+    }
+    private void setGuideline(){
 
-
-
-
-//        ImageButton play = (ImageButton) this.findViewById(R.id.button_play);
-//        play.setOnClickListener(new OnClickListener() {
-//            public void onClick(View v) {
-//                is_playing_desired = true;
-//                text.setText("call play");
-//                nativePlay();
-//            }
-//        });
-//
-//        ImageButton pause = (ImageButton) this.findViewById(R.id.button_stop);
-//        pause.setOnClickListener(new OnClickListener() {
-//            public void onClick(View v) {
-//                is_playing_desired = false;
-//                text.setText("call stop");
-//                nativePause();
-//            }
-//        });
-
-        SurfaceView sv = (SurfaceView) this.findViewById(R.id.surface_video);
-        SurfaceHolder sh = sv.getHolder();
-        sh.addCallback(this);
-
-        if (savedInstanceState != null) {
-            is_playing_desired = savedInstanceState.getBoolean("playing");
-            Log.i ("GStreamer", "Activity created. Saved state is playing:" + is_playing_desired);
-        } else {
-            is_playing_desired = false;
-            Log.i ("GStreamer", "Activity created. There is no saved state, playing: false");
+        Intent intent = this.getIntent();
+        String first = intent.getStringExtra("First");
+        if(first.equals("Y"))
+        {
+            guide_page.setVisibility(View.VISIBLE);
         }
-
-        // Start with disabled buttons, until native code is initialized
-        this.findViewById(R.id.button_play).setEnabled(false);
-        this.findViewById(R.id.button_stop).setEnabled(false);
-
-        //nativeInit();
+        else
+        {
+            guide_page.setVisibility(View.INVISIBLE);
+        }
     }
 
     public void click(View v){
         switch(v.getId()){
 
-            case R.id.button_play:
-                is_playing_desired = true;
-                text.setText("call play");
-                nativePlay();
+//            case R.id.button_play:
+//
+//                break;
+//            case R.id.button_stop:
+//                is_playing_desired = false;
+//                text.setText("call stop");
+//                nativePause();
+//                break;
+            case R.id.guide_button:
+                    guide_page.setVisibility(View.INVISIBLE);
                 break;
-            case R.id.button_stop:
-                is_playing_desired = false;
-                text.setText("call stop");
-                nativePause();
+            case R.id.led_button:
+                text.setText("call led");
+                break;
+            case R.id.music_button:
+                text.setText("call music");
+                break;
+            case R.id.dic_button:
+                text.setText("call dic");
                 break;
 
         }
@@ -208,8 +220,8 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         final Activity activity = this;
         runOnUiThread(new Runnable() {
             public void run() {
-                activity.findViewById(R.id.button_play).setEnabled(true);
-                activity.findViewById(R.id.button_stop).setEnabled(true);
+//                activity.findViewById(R.id.button_play).setEnabled(true);
+//                activity.findViewById(R.id.button_stop).setEnabled(true);
             }
         });
     }

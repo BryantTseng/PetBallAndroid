@@ -5,6 +5,7 @@
 
     android:layout_height="fill_parent" >
 
+
     <org.freedesktop.gstreamer.tutorials.tutorial_3.GStreamerSurfaceView
         android:id="@+id/surface_video"
         android:layout_width="match_parent"
@@ -12,83 +13,189 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_gravity="center_vertical|center_horizontal" />
-    <TextView
-        android:id="@+id/textview_message"
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dip"
-        android:gravity="center_horizontal" />
+        android:layout_height="match_parent"
+        android:weightSum="10">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dip"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:id="@+id/linearLayout">
 
-        <ImageButton
-            android:id="@+id/button_play"
-            android:onClick="click"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/button_play"
-            android:src="@android:drawable/ic_media_play"
-            android:text="@string/button_play" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:layout_marginBottom="0dip"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="0dip"
+                android:gravity="left"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="20dip"
+                    android:layout_height="20dip"
+                    android:layout_margin="10dip"
+                    android:src="@drawable/gray_circle"/>
+            </LinearLayout>
 
-        <ImageButton
-            android:id="@+id/button_stop"
-            android:onClick="click"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:contentDescription="@string/button_stop"
-            android:src="@android:drawable/ic_media_pause"
-            android:text="@string/button_stop" />
-    </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginBottom="0dip"
+                android:gravity="right"
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/dic_button"
+                    android:onClick="click"
+                    android:background="@color/transparent"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="25dip"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/button_play"
+                    android:src="@drawable/gray_circle" />
+                <ImageButton
+                    android:id="@+id/led_button"
+                    android:onClick="click"
+                    android:background="@color/transparent"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="25dip"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/button_play"
+                    android:src="@drawable/gray_circle" />
+                <ImageButton
+                    android:id="@+id/music_button"
+                    android:background="@color/transparent"
+                    android:layout_width="30dip"
+                    android:layout_height="30dip"
+                    android:layout_marginTop="10dip"
+                    android:layout_marginRight="25dip"
+                    android:scaleType="fitStart"
+                    android:onClick="click"
+                    android:contentDescription="@string/button_stop"
+                    android:src="@drawable/gray_circle" />
+            </LinearLayout>
+        </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/control"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/surface_video"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/up_Button"
-
-            android:layout_width="86dp"
-
-            android:layout_height="54dp"
-            android:text="up" />
-
-        <Button
-            android:id="@+id/down_Button"
-
-            android:layout_width="86dp"
-            android:layout_height="54dp"
-            android:text="down" />
-
-        <Button
-            android:id="@+id/right_Button"
-
-            android:layout_width="86dp"
-            android:layout_height="54dp"
-            android:text="right" />
-
-        <Button
-            android:id="@+id/left_Button"
-
-            android:layout_width="86dp"
-            android:layout_height="54dp"
-            android:text="left" />
 
         <TextView
-            android:id="@+id/text"
-            android:layout_width="wrap_content"
+            android:id="@+id/textview_message"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Text" />
+            android:layout_marginBottom="0dip"
+            android:gravity="center_horizontal" />
 
+
+
+        <LinearLayout
+            android:id="@+id/control"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8"
+            android:gravity="center|bottom"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="left|bottom"
+                android:orientation="vertical">
+                <Button
+                    android:id="@+id/up_Button"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="35dip"
+                    android:text="up" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/down_Button"
+                        android:layout_width="70dip"
+                        android:layout_height="50dip"
+                        android:text="down" />
+
+                    <Button
+                        android:id="@+id/right_Button"
+                        android:layout_width="70dip"
+                        android:layout_height="50dip"
+                        android:text="right" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/left_Button"
+                    android:layout_width="70dip"
+                    android:layout_height="50dip"
+                    android:layout_marginLeft="35dip"
+                    android:text="left" />
+
+                <TextView
+                    android:id="@+id/text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Text" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:layout_marginBottom="0dip"
+                android:gravity="right|bottom"
+                android:orientation="vertical">
+
+
+                <ImageButton
+                    android:id="@+id/eat_button"
+                    android:onClick="click"
+                    android:background="@color/transparent"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_marginRight="20dip"
+                    android:layout_marginBottom="10dip"
+                    android:scaleType="fitStart"
+                    android:contentDescription="@string/button_play"
+                    android:src="@drawable/gray_circle" />
+                <ImageButton
+                    android:id="@+id/take_pic_button"
+                    android:background="@color/transparent"
+                    android:layout_width="40dip"
+                    android:layout_height="40dip"
+                    android:layout_margin="20dip"
+                    android:scaleType="fitStart"
+                    android:onClick="click"
+                    android:contentDescription="@string/button_stop"
+                    android:src="@drawable/gray_circle" />
+
+            </LinearLayout>
+        </LinearLayout>
     </LinearLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="fill_parent"
+        android:id="@+id/guide_page"
+        android:layout_height="fill_parent"
+        android:visibility="invisible">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@color/half_transparent"
+        />
+    <Button
+        android:id="@+id/guide_button"
+        android:layout_width="200dip"
+        android:layout_height="54dp"
+        android:layout_centerInParent="true"
+        android:onClick="click"
+        android:text="我知道了" />
+    </RelativeLayout>
 
 </RelativeLayout>

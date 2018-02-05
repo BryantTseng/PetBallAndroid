@@ -9,6 +9,7 @@ import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -35,7 +36,7 @@ public class TeachingActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_teaching);
 
-
+        cut_title();
         initPages();
         initPointer();
         initViewPager();
@@ -44,11 +45,15 @@ public class TeachingActivity extends Activity {
 
     public void click(View v){
         Intent intent = new Intent();
+        intent .putExtra("First","Y"); // first time need teaching guideline
         intent.setClass(TeachingActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.Tutorial3.class);
         startActivity(intent);
 
     }
-
+    private void cut_title(){
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+    }
     private void initPages(){
         LayoutInflater mInflater = getLayoutInflater().from(this);
 
