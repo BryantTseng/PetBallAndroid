@@ -24,7 +24,7 @@
         android:id="@+id/inputblock"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="4.3"
 
         android:gravity="center"
         android:orientation="vertical">
@@ -116,7 +116,7 @@
         android:id="@+id/buttonblock"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.7"
         android:gravity="bottom"
         android:orientation="horizontal">
 
@@ -124,18 +124,16 @@
 
         <Button
             android:id="@+id/Nothing"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dip"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:text="Button"
             android:background="@color/SignUp_button_login"/>
         <Button
             android:id="@+id/SignUp"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dip"
-            android:layout_weight="1"
+            android:layout_weight="0.5"
             android:text="註冊"
             android:background="@color/SignUp_button_createaccount"/>
     </LinearLayout>

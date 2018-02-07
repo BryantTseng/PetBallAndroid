@@ -21,7 +21,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="4.3"
         android:gravity="center"
         android:background="@color/Login_backcolor"
         android:orientation="vertical">
@@ -74,27 +74,25 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="0.7"
             android:layout_gravity="bottom"
             android:gravity="bottom"
             android:orientation="horizontal">
 
             <Button
                 android:id="@+id/login_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dip"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:onClick="click"
                 android:text="登入"
                 android:background="@color/Login_button_login"/>
 
             <Button
                 android:id="@+id/signup_button"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dip"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:onClick="click"
                 android:text="申請帳號"
                 android:background="@color/Login_button_createaccount"/>
