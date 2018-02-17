@@ -34,6 +34,9 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
     private TextView text ;
     private RelativeLayout guide_page;
+    private RelativeLayout list_page;
+
+    private boolean list_page_status;
     // Called when the activity is first created.
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -53,7 +56,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
         text = findViewById(R.id.text);
         guide_page = findViewById(R.id.guide_page);
-
+        list_page = findViewById(R.id.list_page);
 
         SurfaceView sv = (SurfaceView) this.findViewById(R.id.surface_video);
         SurfaceHolder sh = sv.getHolder();
@@ -67,7 +70,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             Log.i ("GStreamer", "Activity created. There is no saved state, playing: false");
         }
 
-        setGuideline();
+        setPage();
         ControlButtonSetting();
         startStreaming();
     }
@@ -138,12 +141,12 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         });
     }
     private void startStreaming(){
-        nativeInit();
+        //nativeInit();
         is_playing_desired = true;
         text.setText("call play");
         //nativePlay();
     }
-    private void setGuideline(){
+    private void setPage(){
 
         Intent intent = this.getIntent();
         String first = intent.getStringExtra("First");
@@ -155,19 +158,29 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         {
             guide_page.setVisibility(View.INVISIBLE);
         }
+
+        list_page.setVisibility(View.INVISIBLE);
+        list_page_status = false;
     }
+
+    private void setListPage()
+    {
+        if(list_page_status== false)
+        {
+            list_page.setVisibility(View.VISIBLE);
+            list_page_status = true;
+        }
+        else
+        {
+            list_page.setVisibility(View.INVISIBLE);
+            list_page_status = false;
+        }
+    }
+
 
     public void click(View v){
         switch(v.getId()){
 
-//            case R.id.button_play:
-//
-//                break;
-//            case R.id.button_stop:
-//                is_playing_desired = false;
-//                text.setText("call stop");
-//                nativePause();
-//                break;
             case R.id.guide_button:
                     guide_page.setVisibility(View.INVISIBLE);
                 break;
@@ -177,8 +190,9 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             case R.id.music_button:
                 text.setText("call music");
                 break;
-            case R.id.dic_button:
+            case R.id.list_button:
                 text.setText("call dic");
+                setListPage();
                 break;
 
         }

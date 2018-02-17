@@ -8,39 +8,50 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.5"
         android:gravity="center"
         android:orientation="vertical">
         <ImageView
             android:id="@+id/imageblock"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/ntust" />
+            android:src="@drawable/roomii_logo" />
+
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="4.3"
-        android:gravity="center"
+        android:layout_weight="4.8"
+        android:gravity="top"
+        android:weightSum="7"
         android:background="@color/Login_backcolor"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:weightSum="1"
             android:gravity="center_horizontal"
-            android:layout_marginBottom="15dp"
+            android:layout_marginTop="50dip"
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/Login_Email"
                 android:layout_width="0dp"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 android:layout_height="match_parent"
-                android:background="@color/Login_textview_backcolor"
+                android:background="@drawable/textview"
                 android:ems="10"
-                android:gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
                 android:hint="email"
                 android:inputType="textEmailAddress"
                 android:singleLine="true"
@@ -51,23 +62,45 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:weightSum="1"
             android:gravity="center_horizontal"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="25dp"
             android:orientation="horizontal">
             <EditText
                 android:id="@+id/editText3"
                 android:layout_width="0dp"
-                android:layout_weight="0.8"
+                android:layout_weight="0.7"
                 android:layout_height="match_parent"
-                android:background="@color/Login_textview_backcolor"
+                android:background="@drawable/textview"
                 android:ems="10"
-                android:gravity="center_horizontal"
+                android:gravity="center_horizontal|center_vertical"
                 android:hint="密碼"
                 android:inputType="textPassword"
                 android:textColor="@color/Login_textview_textcolor"
                 android:textColorHint="@color/Login_textview_hinttextcolor" />
             </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:weightSum="1"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="60dip"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/login_button"
+                android:layout_width="0dp"
+                android:layout_weight="0.7"
+                android:layout_height="match_parent"
+                android:onClick="click"
+                android:text="登入"
+                android:background= "@drawable/login_button"
+                android:textColor="@color/Login_login_button_textcolor"/>
+
+        </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
@@ -80,13 +113,14 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/login_button"
+                android:id="@+id/forgot_button"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.5"
                 android:onClick="click"
-                android:text="登入"
-                android:background="@color/Login_button_login"/>
+                android:text="忘記密碼"
+                android:textColor="@color/Login_button_createaccountANDforgotpass"
+                android:background="@color/transparent"/>
 
             <Button
                 android:id="@+id/signup_button"
@@ -95,7 +129,8 @@
                 android:layout_weight="0.5"
                 android:onClick="click"
                 android:text="申請帳號"
-                android:background="@color/Login_button_createaccount"/>
+                android:textColor="@color/Login_button_createaccountANDforgotpass"
+                android:background="@color/transparent"/>
 
 
         </LinearLayout>

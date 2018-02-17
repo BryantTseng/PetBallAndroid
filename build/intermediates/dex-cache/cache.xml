@@ -7,8 +7,17 @@
         jumboMode="true"
         optimize="true"
         revision="27.0.3"
-        sha1="985a505db4dbd41a76b16c270ecf03ff94cd981f">
+        sha1="35d2095226ea9c76d5504d544c2c7d5d03d1a590">
         <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_844e10fb927db6126e4a7d9d2819d9e58672a859/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.3"
+        sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
+        <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_71f8e38cd216ab0b51e977b5d703211a5d4e151a/classes.dex" />
     </item>
 
 </items>

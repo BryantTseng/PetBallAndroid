@@ -15,11 +15,13 @@
         <Button
             android:id="@+id/jump_button"
             android:layout_width="40dip"
+            android:gravity="center_vertical|center_horizontal"
             android:layout_height="match_parent"
             android:onClick="click"
             android:background="@color/transparent"
             android:layout_margin="5dip"
             android:textColor="#B5B5B6"
+            android:textSize="16dp"
             android:text="跳過" />
 
     </LinearLayout>
@@ -27,7 +29,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.3"
+        android:layout_weight="1"
         android:gravity="center"
         android:orientation="vertical">
 
@@ -35,7 +37,8 @@
             android:id="@+id/text1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="#595757"
+            android:textSize="16dp"
+            android:textColor="@color/Teaching_text"
             android:text="使用教學" />
 
 
@@ -43,8 +46,8 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_height="0dp"
+        android:layout_weight="4.5"
         android:gravity="center"
         android:layout_margin="10dip"
         android:orientation="vertical">
@@ -53,12 +56,10 @@
             android:id="@+id/imageView1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
             android:layout_margin="10dip"
             android:maxHeight="10dip"
             android:maxWidth="10dip"
-            android:src="@drawable/gray_circle" />
+            android:src="@drawable/teaching_1" />
 
 
     </LinearLayout>
@@ -66,7 +67,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:gravity="top|center_horizontal"
         android:layout_margin="10dip"
         android:weightSum="3"
@@ -76,8 +77,9 @@
             android:id="@+id/text2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1.5"
-            android:textColor="#595757"
+            android:layout_weight="1.6"
+            android:textSize="16dp"
+            android:textColor="@color/Teaching_text"
             android:text="首先，餵你的狗狗幾顆即將要放入Roomii的零食吧！" />
 
 

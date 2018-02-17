@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 按壓時 -->
+    <item android:state_pressed="true"
+        android:drawable="@drawable/source_light_press"
+        >
+    </item>
+
+
+    <!-- 預設時 -->
+    <item
+        android:drawable="@drawable/source_light"
+        >
+    </item>
+</selector>
