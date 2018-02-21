@@ -17,8 +17,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import org.freedesktop.gstreamer.GStreamer;
-import org.freedesktop.gstreamer.tutorial_3.WebConnect;
-
+import org.freedesktop.gstreamer.tutorials.tutorial_3.GlobalVariable;
+import org.freedesktop.gstreamer.tutorials.tutorial_3.WebConnect;
 
 public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
     private native void nativeInit();     // Initialize native code, build pipeline, etc
@@ -80,15 +80,17 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
     }
     private void ControlButtonSetting(){
         Button up = (Button)this.findViewById(R.id.up_Button);
+        GlobalVariable gv = (GlobalVariable)getApplicationContext();
+        final WebConnect Webconn = new WebConnect(gv);
         up.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        new WebConnect().execute("go?direction=1");
+                         Webconn.execute("go?direction=1");
                         break;
                     case MotionEvent.ACTION_UP:
-                        new WebConnect().execute("stop?direction=1");
+                        Webconn.execute("stop?direction=1");
                         break;
                 }
                 return false;
@@ -100,10 +102,10 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        new WebConnect().execute("go?direction=2");
+                        Webconn.execute("go?direction=2");
                         break;
                     case MotionEvent.ACTION_UP:
-                        new WebConnect().execute("stop?direction=2");
+                        Webconn.execute("stop?direction=2");
                         break;
                 }
                 return false;
@@ -115,10 +117,10 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             public boolean onTouch(View v, MotionEvent event) {
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        new WebConnect().execute("go?direction=3");
+                        Webconn.execute("go?direction=3");
                         break;
                     case MotionEvent.ACTION_UP:
-                        new WebConnect().execute("stop?direction=3");
+                        Webconn.execute("stop?direction=3");
                         break;
                 }
                 return false;
@@ -128,12 +130,13 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         right.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
+
                 switch ( event.getAction() ) {
                     case MotionEvent.ACTION_DOWN:
-                        new WebConnect().execute("go?direction=4");
+                        Webconn.execute("go?direction=4");
                         break;
                     case MotionEvent.ACTION_UP:
-                        new WebConnect().execute("stop?direction=4");
+                        Webconn.execute("stop?direction=4");
                         break;
                 }
                 return false;
