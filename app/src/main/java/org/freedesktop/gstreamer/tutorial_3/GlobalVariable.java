@@ -7,9 +7,9 @@ import android.app.Application;
  */
 
 public class GlobalVariable extends Application {
-   private String roomii_IP = "";
-   private String database_IP = "";
-
+   private String roomii_IP = "init";
+   private String database_IP = "init";
+   private int LoginState = 0;
    public String getDB_IP(){
        return this.database_IP;
    }
@@ -19,5 +19,7 @@ public class GlobalVariable extends Application {
    public void setRoomii_IP(String ip){
        this.roomii_IP=ip;
    }
+   public void setLoginState(int num){LoginState=num;}
+   public int getLoginState(){return LoginState;}
 
 }
