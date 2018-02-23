@@ -37,7 +37,7 @@ public class SelectControlActivity extends Fragment {
         final TextView mText = getView().findViewById(R.id.test);
         jump.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                mText.setText("small pig");
+                mText.setText("go to stream");
             }
         });
 //        //取得TextView元件並帶入text字串

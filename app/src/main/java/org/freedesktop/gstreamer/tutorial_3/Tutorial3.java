@@ -32,7 +32,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
 
-    private TextView text ;
+
     private RelativeLayout guide_page;
     private RelativeLayout list_page;
 
@@ -54,7 +54,6 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
         setContentView(R.layout.main);
 
-        text = findViewById(R.id.text);
         guide_page = findViewById(R.id.guide_page);
         list_page = findViewById(R.id.list_page);
 
@@ -143,13 +142,12 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
     private void startStreaming(){
         //nativeInit();
         is_playing_desired = true;
-        text.setText("call play");
         //nativePlay();
     }
     private void setPage(){
 
-        Intent intent = this.getIntent();
-        String first = intent.getStringExtra("First");
+        Intent setPageiIntent = this.getIntent();
+        String first = setPageiIntent.getStringExtra("First");
         if(first.equals("Y"))
         {
             guide_page.setVisibility(View.VISIBLE);
@@ -185,14 +183,32 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                     guide_page.setVisibility(View.INVISIBLE);
                 break;
             case R.id.led_button:
-                text.setText("call led");
+
                 break;
             case R.id.music_button:
-                text.setText("call music");
+
                 break;
             case R.id.list_button:
-                text.setText("call dic");
+
                 setListPage();
+                break;
+            case R.id.sitting_button:
+                Intent sitting_intent = new Intent();
+                sitting_intent .putExtra("type","sitting"); // told SelectPage go to which tab
+                sitting_intent.setClass(Tutorial3.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SelectActivity.class);
+                startActivity(sitting_intent);
+                break;
+            case R.id.album_button:
+                Intent album_intent = new Intent();
+                album_intent .putExtra("type","album"); // told SelectPage go to which tab
+                album_intent.setClass(Tutorial3.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SelectActivity.class);
+                startActivity(album_intent);
+                break;
+            case R.id.count_button:
+                Intent count_intent = new Intent();
+                count_intent .putExtra("type","count"); // told SelectPage go to which tab
+                count_intent.setClass(Tutorial3.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SelectActivity.class);
+                startActivity(count_intent);
                 break;
 
         }
