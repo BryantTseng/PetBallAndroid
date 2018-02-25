@@ -48,26 +48,27 @@ public class LoginActivity extends Activity {
                 GlobalVariable gv = (GlobalVariable)getApplicationContext();
 //                gv.setRoomii_IP("change");
 
-                JSONObject logindata = new JSONObject();
-                String test;
-                gv.setLoginState(1);
-                WebConnect Webcon = new WebConnect(gv);
-                test = Webcon.execute("login?email="+login_email+"&password="+login_password).toString();
-                Log.d("LOGINTEST",test);
-                //Log.d("loginstate",gv.getLoginState());
-                if(gv.getLoginState()==2){
-                   //login success
-                    gv.setLoginState(0);
-                    intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.TeachingActivity.class);
-                    startActivity(intent);
-                }
-                else if(gv.getLoginState()==3){
-                    gv.setLoginState(0);
-                    //login failed
-                }
+//                JSONObject logindata = new JSONObject();
+//                String test;
+//                gv.setLoginState(1);
+//                WebConnect Webcon = new WebConnect(gv);
+//                test = Webcon.execute("login?email="+login_email+"&password="+login_password).toString();
+//                Log.d("LOGINTEST",test);
+//                //Log.d("loginstate",gv.getLoginState());
+//                if(gv.getLoginState()==2){
+//                   //login success
+//                    gv.setLoginState(0);
+//                    intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.TeachingActivity.class);
+//                    startActivity(intent);
+//                }
+//                else if(gv.getLoginState()==3){
+//                    gv.setLoginState(0);
+//                    //login failed
+//                }
 
 
-
+                intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.TeachingActivity.class);
+                startActivity(intent);
 
                 break;
             case R.id.signup_button:
