@@ -34,4 +34,5 @@ android {
 dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:+'
+    compile project(':mysql-connector-java-5.1.45-bin')
 }

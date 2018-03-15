@@ -168,11 +168,11 @@
                             android:orientation="horizontal"
                             android:gravity="center_horizontal">
                             <Button
-                                android:id="@+id/down_Button"
-                                android:layout_width="0dp"
+                                android:id="@+id/left_Button"
+                                android:layout_width="0dip"
                                 android:layout_height="match_parent"
                                 android:layout_weight="0.8"
-                                android:text="down" />
+                                android:text="left" />
 
 
 
@@ -191,12 +191,13 @@
                             android:layout_weight="1"
                             android:gravity="center_horizontal"
                             android:orientation="horizontal">
-                        <Button
-                            android:id="@+id/left_Button"
-                            android:layout_width="0dip"
-                            android:layout_height="match_parent"
-                            android:layout_weight="0.8"
-                            android:text="left" />
+                            <Button
+                                android:id="@+id/down_Button"
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="0.8"
+                                android:text="down" />
+
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
