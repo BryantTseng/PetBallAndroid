@@ -77,8 +77,9 @@
             android:id="@+id/text2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:gravity="center_horizontal|top"
             android:layout_weight="1.6"
-            android:textSize="16dp"
+            android:textSize="20dp"
             android:textColor="@color/Teaching_text"
             android:text="首先，餵你的狗狗幾顆即將要放入Roomii的零食吧！" />
 
