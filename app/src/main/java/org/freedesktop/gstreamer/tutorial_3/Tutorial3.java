@@ -78,7 +78,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
         setPage();
         ControlButtonSetting();
-        startStreaming();
+        //startStreaming();
     }
     private void cut_title(){
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
