@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.WindowManager;
 //import android.widget.ImageButton;
 import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,6 +39,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
     private RelativeLayout guide_page;
     private RelativeLayout list_page;
+    private LinearLayout control_page;
 
     private boolean list_page_status;
     // Called when the activity is first created.
@@ -63,6 +66,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
         guide_page = findViewById(R.id.guide_page);
         list_page = findViewById(R.id.list_page);
+        control_page = findViewById(R.id.control_page);
 
         SurfaceView sv = (SurfaceView) this.findViewById(R.id.surface_video);
         SurfaceHolder sh = sv.getHolder();
@@ -85,7 +89,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
     }
     private void ControlButtonSetting(){
-        Button up = (Button)this.findViewById(R.id.up_Button);
+        ImageButton up = (ImageButton)this.findViewById(R.id.up_Button);
         GlobalVariable gv = (GlobalVariable)getApplicationContext();
         final WebConnect Webconn = new WebConnect(gv);
         up.setOnTouchListener(new View.OnTouchListener() {
@@ -106,7 +110,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 return false;
             }
         });
-        Button down = (Button)this.findViewById(R.id.down_Button);
+        ImageButton down = (ImageButton)this.findViewById(R.id.down_Button);
         down.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -125,7 +129,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 return false;
             }
         });
-        Button left = (Button)this.findViewById(R.id.left_Button);
+        ImageButton left = (ImageButton)this.findViewById(R.id.left_Button);
         left.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -143,7 +147,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 return false;
             }
         });
-        Button right = (Button)this.findViewById(R.id.right_Button);
+        ImageButton right = (ImageButton)this.findViewById(R.id.right_Button);
         right.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
@@ -191,11 +195,13 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         if(list_page_status== false)
         {
             list_page.setVisibility(View.VISIBLE);
+            control_page.setVisibility(View.INVISIBLE);
             list_page_status = true;
         }
         else
         {
             list_page.setVisibility(View.INVISIBLE);
+            control_page.setVisibility(View.VISIBLE);
             list_page_status = false;
         }
     }
@@ -216,6 +222,13 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             case R.id.list_button:
 
                 setListPage();
+                break;
+            case R.id.list_return_button:
+                setListPage();
+                break;
+            case R.id.eat_button:
+                GlobalVariable gv = (GlobalVariable)getApplicationContext();
+                new WebConnect(gv).execute("feed");
                 break;
             case R.id.sitting_button:
                 Intent sitting_intent = new Intent();

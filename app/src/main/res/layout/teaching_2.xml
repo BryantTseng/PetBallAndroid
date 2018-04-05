@@ -78,8 +78,10 @@
             android:id="@+id/text2"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:gravity="center_horizontal|top"
             android:layout_weight="1.6"
-            android:textSize="16dp"
+            android:textSize="20dp"
+
             android:textColor="@color/Teaching_text"
             android:text="將零食放進Roomii，記得確保狗狗正在看喔" />
 
