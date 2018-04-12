@@ -72,7 +72,7 @@ public class LoginActivity extends Activity {
 
                 break;
             case R.id.signup_button:
-                intent.setClass(LoginActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SignupActivity.class);
+                intent.setClass(LoginActivity.this, org.freedesktop.gstreamer.tutorials.tutorial_3.SignupActivity.class);
                 startActivity(intent);
                 break;
         }

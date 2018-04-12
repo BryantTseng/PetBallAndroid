@@ -10,6 +10,7 @@ public class GlobalVariable extends Application {
    private String roomii_IP = "172.20.10.5";
    private String database_IP = "init";
    private int LoginState = 0;
+   private int LightColor = 0;
    public String getDB_IP(){
        return this.database_IP;
    }
@@ -22,4 +23,8 @@ public class GlobalVariable extends Application {
    public void setLoginState(int num){LoginState=num;}
    public int getLoginState(){return LoginState;}
 
+
+   //yellow color is 0 , blue color is 1, random is 2
+   public void setLightColor(int color){LightColor = color;}
+   public int getLightColor(){return LightColor;}
 }

@@ -42,4 +42,5 @@ public class SelectCountActivity extends Fragment {
 //        ImageView mImg = (ImageView) getActivity().findViewById(R.id.img);
 //        mImg.setImageResource(R.drawable.lesson1_img);
     }
+
 }

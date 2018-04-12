@@ -33,17 +33,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity" >
-
-        </activity>
+        <activity android:name=".SignupActivity" />
         <activity android:name=".TeachingActivity" />
-        <activity android:name=".SelectActivity" >
-
-        </activity>
-        <!--<activity android:name=".SelectControlActivity" />-->
-        <!--<activity android:name=".SelectAlbumActivity" />-->
-        <!--<activity android:name=".SelectCountActivity" />-->
-        <activity android:name=".SelectSittingActivity"></activity>
+        <activity android:name=".SelectActivity" />
+        <!-- <activity android:name=".SelectControlActivity" /> -->
+        <!-- <activity android:name=".SelectAlbumActivity" /> -->
+        <!-- <activity android:name=".SelectCountActivity" /> -->
+        <activity android:name=".AdjustLightColorActivity"/>
     </application>
 
 </manifest>
