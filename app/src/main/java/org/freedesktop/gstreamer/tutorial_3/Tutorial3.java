@@ -26,6 +26,8 @@ import org.freedesktop.gstreamer.tutorials.tutorial_3.GlobalVariable;
 import org.freedesktop.gstreamer.tutorials.tutorial_3.WebConnect;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
@@ -253,12 +255,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 album_intent.setClass(Tutorial3.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SelectActivity.class);
                 startActivity(album_intent);
                 break;
-            case R.id.count_button:
-                Intent count_intent = new Intent();
-                count_intent .putExtra("type","count"); // told SelectPage go to which tab
-                count_intent.setClass(Tutorial3.this , org.freedesktop.gstreamer.tutorials.tutorial_3.SelectActivity.class);
-                startActivity(count_intent);
-                break;
+
 
         }
     }
@@ -346,4 +343,6 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
             ignored.printStackTrace();
         }
     }
+
+
 }

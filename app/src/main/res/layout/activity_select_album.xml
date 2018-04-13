@@ -33,11 +33,14 @@
             android:weightSum="8"
             android:orientation="vertical">
 
-            <LinearLayout
+            <GridView
                 android:layout_width="match_parent"
-                android:layout_height="0dip"
-                android:layout_weight="8.2">
-            </LinearLayout>
+                android:layout_height="match_parent"
+                android:id="@+id/myGridview"
+                android:numColumns="auto_fit"
+                android:gravity="center"
+                android:columnWidth="50pt"
+                android:stretchMode="columnWidth"/>
 
         </LinearLayout>
 

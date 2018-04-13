@@ -542,50 +542,56 @@
                 android:layout_height="0dip"
                 android:gravity="center_horizontal"
                 android:weightSum="1"
-                android:layout_weight="0.15">
+                android:layout_weight="0.2">
                 <LinearLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
-                    android:layout_weight="0.1">
+                    android:layout_weight="0.1"
+                    android:orientation="vertical"
+                    android:weightSum="10">
 
                     <ImageButton
                         android:id="@+id/sitting_button"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
                         android:src="@drawable/play_sitting"
                         android:background="@color/transparent"
                         android:onClick="click"
                         android:scaleType="fitStart"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:textColor= "#000000"
+                        android:gravity="center"
+                        android:text="設定"/>
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="0dip"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="30dip"
                     android:layout_marginRight="30dip"
-                    android:layout_weight="0.1">
+                    android:layout_weight="0.1"
+                    android:weightSum="10"
+                    android:orientation="vertical">
 
                     <ImageButton
                         android:id="@+id/album_button"
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="8"
                         android:src="@drawable/play_album"
                         android:background="@color/transparent"
                         android:onClick="click"
                         android:scaleType="fitStart"/>
-                </LinearLayout>
-                <LinearLayout
-                    android:layout_width="0dip"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.1">
-
-                    <ImageButton
-                        android:id="@+id/count_button"
+                    <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:src="@drawable/play_count"
-                        android:background="@color/transparent"
-                        android:onClick="click"
-                        android:scaleType="fitStart"/>
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:textColor= "#000000"
+                        android:gravity="center"
+                        android:text="相簿"/>
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
