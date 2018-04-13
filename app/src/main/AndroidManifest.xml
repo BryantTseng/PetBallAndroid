@@ -39,7 +39,13 @@
         <!-- <activity android:name=".SelectControlActivity" /> -->
         <!-- <activity android:name=".SelectAlbumActivity" /> -->
         <!-- <activity android:name=".SelectCountActivity" /> -->
-        <activity android:name=".AdjustLightColorActivity"/>
+        <activity android:name=".AdjustLightColorActivity" />
+        <activity
+            android:name=".AdjustControlerLocaActivity"
+            android:label="@string/title_activity_adjust_controler_loca" />
+        <activity
+            android:name=".AdjustSoundActivity"
+            android:label="@string/title_activity_adjust_sound"></activity>
     </application>
 
 </manifest>

@@ -70,9 +70,23 @@ public class SelectActivity extends FragmentActivity {
             case R.id.lightAdjButton:
                 this.finish();
                 Intent intent = new Intent();
-                intent.setClass(SelectActivity.this , AdjustLightColorActivity.class);
+                intent.setClass(SelectActivity.this, org.freedesktop.gstreamer.tutorials.tutorial_3.AdjustLightColorActivity.class);
                 startActivity(intent);
+                break;
 
+            case R.id.soundAdjButton:
+                this.finish();
+                intent = new Intent();
+                intent.setClass(SelectActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.AdjustSoundActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.controlerLocaAdjButton:
+                this.finish();
+                intent = new Intent();
+                intent.setClass(SelectActivity.this , org.freedesktop.gstreamer.tutorials.tutorial_3.AdjustControlerLocaActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 

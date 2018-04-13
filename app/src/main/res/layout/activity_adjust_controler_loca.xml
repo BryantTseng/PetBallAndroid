@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:gravity="center_vertical|center_horizontal"
+
+    android:background="@color/Select_sitting_backcolor"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        >
+
+        <!-- Image圖片 -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:weightSum="9"
+            android:gravity="left"
+            android:background="@color/Select_top_backcolor">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.2">
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:weightSum="5">
+                <ImageButton
+                    android:id="@+id/returnButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:src="@drawable/source_return_button"
+                    android:layout_weight="2.5"
+                    android:scaleType="fitStart"
+                    android:background="@color/transparent"
+                    android:onClick="click"/>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1.8">
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:textSize="30dp"
+                android:textColor="@color/Select_backcolor"
+                android:gravity="center"
+                android:text="方向鍵位置"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="9"
+            android:weightSum="15"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="0.5"/>
+            <Button
+                android:id="@+id/leftSetButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/Select_backcolor"
+                android:text="左邊（預設）"
+                android:textSize="30dp"
+                android:gravity="left|center_vertical"
+                android:layout_marginBottom="5dp"
+                android:onClick="click"
+                />
+            <Button
+                android:id="@+id/rightSetButton"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:background="@color/Select_backcolor"
+                android:text="右邊"
+                android:textSize="30dp"
+                android:gravity="left|center_vertical"
+                android:layout_marginBottom="5dp"
+                android:onClick="click"
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</LinearLayout>
