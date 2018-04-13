@@ -2,7 +2,9 @@ package org.freedesktop.gstreamer.tutorials.tutorial_3;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.os.Environment;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
@@ -18,10 +20,12 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.freedesktop.gstreamer.otherfunction.Utils;
 import org.freedesktop.gstreamer.GStreamer;
 import org.freedesktop.gstreamer.tutorials.tutorial_3.GlobalVariable;
 import org.freedesktop.gstreamer.tutorials.tutorial_3.WebConnect;
 
+import java.io.File;
 import java.util.concurrent.ThreadPoolExecutor;
 
 public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
@@ -36,7 +40,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
     private boolean is_playing_desired;   // Whether the user asked to go to PLAYING
 
-
+    private int nowPictureNum = 1;
     private RelativeLayout guide_page;
     private RelativeLayout list_page;
     private LinearLayout control_page;
@@ -223,6 +227,13 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
                 setListPage();
                 break;
+
+            case R.id.take_pic_button:
+                control_page.setVisibility(View.INVISIBLE);
+                shareScreen();
+                control_page.setVisibility(View.VISIBLE);
+                break;
+
             case R.id.list_return_button:
                 setListPage();
                 break;
@@ -316,4 +327,23 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
         nativeSurfaceFinalize ();
     }
 
+    private void shareScreen() {
+        try {
+
+            String name = "picture"+nowPictureNum+".jpg";
+            nowPictureNum+=1;
+            File path = android.os.Environment.getExternalStoragePublicDirectory("RoomiiPicture");
+//            File path = android.os.Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+            File file = new File(path, name);
+
+            Bitmap b = Utils.takeScreenShot(this);
+            Utils.savePic(b, file.toString(),this);
+
+            Toast.makeText(getApplicationContext(), "Screenshot Saved", Toast.LENGTH_SHORT).show();
+
+
+        } catch (NullPointerException ignored) {
+            ignored.printStackTrace();
+        }
+    }
 }
