@@ -3,4 +3,7 @@
     <string name="app_name">roomii</string>
     <string name="button_play">Play</string>
     <string name="button_stop">Stop</string>
+    <string name="title_activity_adjust_light_color">AdjustLightColorActivity</string>
+    <string name="title_activity_adjust_controler_loca">AdjustControlerLocaActivity</string>
+    <string name="title_activity_adjust_sound">AdjustSoundActivity</string>
 </resources>

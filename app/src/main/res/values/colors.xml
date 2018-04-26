@@ -38,6 +38,9 @@
     <color name="Select_backcolor">#ffffff</color>>
     <color name="Select_indirector_backcolor">#EFEFEF</color>>
     <color name="Select_top_backcolor">#65B0D4</color>>
+    <color name="Select_sitting_backcolor">#e5e5e5</color>>
+    <color name="Select_sitting_text">#898989</color>>
+    <color name="Select_sitting_text_inside_texture">#595757</color>>
     <!--SelectPage-->
 
     <color name="light_grey">#CCCCCC</color>
@@ -45,7 +48,7 @@
     <color name="divider_color">#FFBB00</color>
     <color name="half_transparent">#80ffffff</color>
     <color name="transparent">#00000000</color>
-
+    <color name="control_button">#FFFFFF</color>"
 
 
 

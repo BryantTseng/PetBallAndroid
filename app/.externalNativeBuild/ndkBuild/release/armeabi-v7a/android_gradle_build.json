@@ -1,34 +1,34 @@
 {
   "buildFiles": [
-    "/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Android.mk",
-    "/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Application.mk"
+    "/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Android.mk",
+    "/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Application.mk"
   ],
   "cleanCommands": [
-    "/home/bryant/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib clean"
+    "/home/will/Desktop/petball/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib clean"
   ],
   "libraries": {
     "tutorial-3-release-armeabi-v7a": {
-      "buildCommand": "/home/bryant/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib /home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libtutorial-3.so",
+      "buildCommand": "/home/will/Desktop/petball/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib /home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libtutorial-3.so",
       "toolchain": "toolchain-armeabi-v7a",
       "abi": "armeabi-v7a",
       "artifactName": "tutorial-3",
       "files": [
         {
-          "src": "/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/tutorial-3.c",
-          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/home/bryant/Desktop/gst/armv7/include/gstreamer-1.0\" \"-I/home/bryant/Desktop/gst/armv7/include/glib-2.0\" \"-I/home/bryant/Desktop/gst/armv7/lib/glib-2.0/include\" \"-I/home/bryant/Desktop/gst/armv7/include\" \"-I/home/bryant/Desktop/PetBallAndroid/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/home/bryant/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm/usr/include\""
+          "src": "/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/tutorial-3.c",
+          "flags": "\"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-mthumb\" \"-Os\" \"-g\" \"-DNDEBUG\" \"-fomit-frame-pointer\" \"-fno-strict-aliasing\" \"-finline-limit\u003d64\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include/gstreamer-1.0\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include/glib-2.0\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/lib/glib-2.0/include\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include\" \"-I/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni\" \"-DANDROID\" \"-Wa,--noexecstack\" \"-Wformat\" \"-Werror\u003dformat-security\" \"-I/home/will/Desktop/petball/android-ndk-r10e/platforms/android-14/arch-arm/usr/include\""
         }
       ],
-      "output": "/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libtutorial-3.so"
+      "output": "/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj/local/armeabi-v7a/libtutorial-3.so"
     },
     "gstreamer_android-release-gst-build-armeabi-v7a": {
-      "buildCommand": "/home/bryant/Android/Sdk/ndk-bundle/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/bryant/Desktop/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/bryant/Desktop/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib gst-build-armeabi-v7a/libgstreamer_android.so",
+      "buildCommand": "/home/will/Desktop/petball/android-ndk-r10e/ndk-build NDK_PROJECT_PATH\u003dnull APP_BUILD_SCRIPT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Android.mk NDK_APPLICATION_MK\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/src/main/jni/Application.mk APP_ABI\u003darmeabi-v7a NDK_ALL_ABIS\u003darmeabi-v7a NDK_DEBUG\u003d0 APP_PLATFORM\u003dandroid-14 NDK_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/obj NDK_LIBS_OUT\u003d/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/ndkBuild/release/lib gst-build-armeabi-v7a/libgstreamer_android.so",
       "toolchain": "toolchain-gst-build-armeabi-v7a",
       "abi": "gst-build-armeabi-v7a",
       "artifactName": "gstreamer_android",
       "files": [
         {
-          "src": "/home/bryant/Desktop/PetBallAndroid/app/gst-build-armeabi-v7a/gstreamer_android.c",
-          "flags": "\"--sysroot\u003d/home/bryant/Android/Sdk/ndk-bundle/platforms/android-14/arch-arm\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-Wall\" \"-Werror\" \"-I/home/bryant/Desktop/gst/armv7/include/gstreamer-1.0\" \"-I/home/bryant/Desktop/gst/armv7/include/glib-2.0\" \"-I/home/bryant/Desktop/gst/armv7/lib/glib-2.0/include\" \"-I/home/bryant/Desktop/gst/armv7/include\""
+          "src": "/home/will/AndroidStudioProjects/PetBallAndroid/app/gst-build-armeabi-v7a/gstreamer_android.c",
+          "flags": "\"--sysroot\u003d/home/will/Desktop/petball/android-ndk-r10e/platforms/android-14/arch-arm\" \"-fpic\" \"-ffunction-sections\" \"-funwind-tables\" \"-fstack-protector\" \"-no-canonical-prefixes\" \"-march\u003darmv7-a\" \"-mfpu\u003dvfpv3-d16\" \"-mfloat-abi\u003dsoftfp\" \"-Wall\" \"-Werror\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include/gstreamer-1.0\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include/glib-2.0\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/lib/glib-2.0/include\" \"-I/home/will/Desktop/petball/gstreamer1.12.4/armv7/include\""
         }
       ],
       "output": "gst-build-armeabi-v7a/libgstreamer_android.so"
@@ -36,10 +36,10 @@
   },
   "toolchains": {
     "toolchain-gst-build-armeabi-v7a": {
-      "cCompilerExecutable": "/home/bryant/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
+      "cCompilerExecutable": "/home/will/Desktop/petball/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
     },
     "toolchain-armeabi-v7a": {
-      "cCompilerExecutable": "/home/bryant/Android/Sdk/ndk-bundle/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
+      "cCompilerExecutable": "/home/will/Desktop/petball/android-ndk-r10e/toolchains/arm-linux-androideabi-4.8/prebuilt/linux-x86_64/bin/arm-linux-androideabi-gcc"
     }
   },
   "cFileExtensions": [

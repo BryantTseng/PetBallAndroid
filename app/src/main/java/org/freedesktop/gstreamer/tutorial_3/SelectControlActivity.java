@@ -1,6 +1,9 @@
 package org.freedesktop.gstreamer.tutorials.tutorial_3;
 
 import android.content.Context;
+import android.os.Handler;
+import android.os.Message;
+import android.os.SystemClock;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,10 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 public class SelectControlActivity extends Fragment {
-
+    private static final int STOPSPLASH = 0;
+    // time in milliseconds
+    private static final long SPLASHTIME = 1000;
+    private LinearLayout splash;
+    private LinearLayout start;
     @Override
     public void onAttach(Context context)
     {
@@ -33,19 +41,35 @@ public class SelectControlActivity extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState)
     {
         super.onActivityCreated(savedInstanceState);
+
+
+        Message msg = new Message();
+        msg.what = STOPSPLASH;
+
+        splash = (LinearLayout) getActivity().findViewById(R.id.splashScreen);
+        start = (LinearLayout) getActivity().findViewById(R.id.startScreen);
+        splashHandler.sendMessageDelayed(msg, SPLASHTIME);
+
+        splash.setVisibility(View.VISIBLE);
+        start.setVisibility(View.INVISIBLE);
+
+
         Button jump =  getView().findViewById(R.id.button_startplay);
-        final TextView mText = getView().findViewById(R.id.test);
         jump.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
-                mText.setText("go to stream");
             }
         });
-//        //取得TextView元件並帶入text字串
-//        TextView mText = (TextView) getView().findViewById(R.id.text);
-//        mText.setText(text);
-//
-//        //取得ImageView元件並帶入指定圖片
-//        ImageView mImg = (ImageView) getActivity().findViewById(R.id.img);
-//        mImg.setImageResource(R.drawable.lesson1_img);
     }
+    private Handler splashHandler = new Handler() {
+        public void handleMessage(Message msg) {
+            switch (msg.what) {
+                case STOPSPLASH:
+                    SystemClock.sleep(2500);
+                    splash.setVisibility(View.INVISIBLE);
+                    start.setVisibility(View.VISIBLE);
+                    break;
+            }
+            super.handleMessage(msg);
+        }
+    };
 }
