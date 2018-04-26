@@ -86,7 +86,7 @@
             android:textSize="22dp"
 
             android:textColor="@color/Teaching_text"
-            android:text="將零食放進Roomii，記得確保狗狗正在看喔" />
+            android:text="將零食放進roomii，記得確保狗狗正在看喔" />
 
 
     </LinearLayout>

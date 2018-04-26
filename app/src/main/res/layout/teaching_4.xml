@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFFFF"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="right"
+        android:weightSum="10"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/jump_button"
+            android:layout_width="0dip"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="click"
+            android:background="@color/transparent"
+            android:layout_margin="5dip"
+            android:textColor="#B5B5B6"
+            android:textSize="22dp"
+            android:text="跳過" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#595757"
+            android:textSize="22dp"
+            android:text="使用教學" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dip"
+            android:maxHeight="10dip"
+            android:maxWidth="10dip"
+            android:src="@drawable/teaching_4" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:gravity="top|center_horizontal"
+        android:layout_margin="10dip"
+        android:weightSum="3"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal|top"
+            android:layout_weight="1.6"
+            android:textSize="22dp"
+
+            android:textColor="@color/Teaching_text"
+            android:text="上一頁的聲音按鈕會顯示在操控畫面的右上角，之後可用來呼叫您的狗狗哦！" />
+
+
+
+
+    </LinearLayout>
+</LinearLayout>

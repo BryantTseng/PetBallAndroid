@@ -31,6 +31,8 @@ public class TeachingActivity extends Activity {
     private View v1;
     private View v2;
     private View v3;
+    private View v4;
+    private View v5;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -60,10 +62,14 @@ public class TeachingActivity extends Activity {
         v1 = mInflater.inflate(R.layout.teaching_1, null);
         v2 = mInflater.inflate(R.layout.teaching_2, null);
         v3 = mInflater.inflate(R.layout.teaching_3, null);
+        v4 = mInflater.inflate(R.layout.teaching_4, null);
+        v5 = mInflater.inflate(R.layout.teaching_5, null);
         viewList = new ArrayList<View>();
         viewList.add(v1);
         viewList.add(v2);
         viewList.add(v3);
+        viewList.add(v4);
+        viewList.add(v5);
 
 
         mViewPager = (ViewPager) findViewById(R.id.viewpager);

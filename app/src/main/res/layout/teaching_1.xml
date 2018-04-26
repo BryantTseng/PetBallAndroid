@@ -84,7 +84,7 @@
             android:layout_weight="1.6"
             android:textSize="22dp"
             android:textColor="@color/Teaching_text"
-            android:text="首先，餵你的狗狗幾顆即將要放入Roomii的零食吧！" />
+            android:text="首先，餵你的狗狗幾顆即將要放入roomii的零食吧！" />
 
 
     </LinearLayout>

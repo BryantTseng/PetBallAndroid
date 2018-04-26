@@ -7,12 +7,18 @@ import android.os.Environment;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -22,6 +28,10 @@ import java.util.Map;
 
 public class SelectAlbumActivity extends Fragment {
     private GridView gridView;
+    private ImageView aloneV;
+    private LinearLayout totalView;
+    private RelativeLayout oneView;
+    private Button backButton;
     @Override
     public void onAttach(Context context)
     {
@@ -54,6 +64,11 @@ public class SelectAlbumActivity extends Fragment {
 //        ImageView mImg = (ImageView) getActivity().findViewById(R.id.img);
 //        mImg.setImageResource(R.drawable.lesson1_img);
 
+        aloneV = (ImageView) getActivity().findViewById(R.id.aloneImage);
+        totalView = (LinearLayout)getActivity().findViewById(R.id.TotalImageView);
+        oneView = (RelativeLayout)getActivity().findViewById(R.id.OneImageView);
+
+        final List<Bitmap>MyImage =  new ArrayList<>();
 
         List<Map<String, Object>> items = new ArrayList<>();
         List<String> allImage = getList(android.os.Environment.getExternalStoragePublicDirectory("RoomiiPicture"));
@@ -63,6 +78,7 @@ public class SelectAlbumActivity extends Fragment {
             mypic = getBitmapFromSDCard("RoomiiPicture/"+allImage.get(i));
             item.put("image", mypic);
             items.add(item);
+            MyImage.add(mypic);
         }
 
         SimpleAdapter adapter = new SimpleAdapter(this.getActivity(),
@@ -87,15 +103,29 @@ public class SelectAlbumActivity extends Fragment {
         gridView = (GridView)getView().findViewById(R.id.myGridview);
         gridView.setNumColumns(3);
         gridView.setAdapter(adapter);
-//        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Toast.makeText(MainActivity.this, "你選擇了" + imgText[position], Toast.LENGTH_SHORT).show();
-//            }
-//        });
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                totalView.setVisibility(View.INVISIBLE);
+                oneView.setVisibility(View.VISIBLE);
+                aloneV.setImageBitmap(MyImage.get(position));
+            }
+        });
+
+
+        backButton = (Button)getActivity().findViewById(R.id.backButton);
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //do something
+                Log.i("MyAppEvent","btnEvent1 Click");
+                totalView.setVisibility(View.VISIBLE);
+                oneView.setVisibility(View.INVISIBLE);
+            }
+        });
 
     }
-
+//
     private static Bitmap getBitmapFromSDCard(String file)
     {
         try

@@ -91,7 +91,7 @@
                             android:textColor="@color/Select_sitting_text_inside_texture"
                             android:gravity="center_vertical"
                             android:textSize="18dp"
-                            android:text="方向鍵位置"/>
+                            android:text=" 方向鍵位置"/>
                         <LinearLayout
                             android:layout_width="0dp"
                             android:layout_height="match_parent"
@@ -117,7 +117,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp"/>
                             </LinearLayout>
                         </LinearLayout>
 
@@ -175,7 +176,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -234,7 +236,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -292,7 +295,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -350,7 +354,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -408,7 +413,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp" />
                             </LinearLayout>
                         </LinearLayout>
 
@@ -458,7 +464,8 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="0dp"
                                     android:src="@drawable/source_sitting_enter"
-                                    android:layout_weight="0.6" />
+                                    android:layout_weight="0.4"
+                                    android:layout_marginRight="5dp"/>
                             </LinearLayout>
                         </LinearLayout>
 

@@ -26,34 +26,40 @@
             android:label="@string/app_name"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
-        <activity android:name=".LoginActivity"
-            android:screenOrientation="portrait" >
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait">
 
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
-        <activity android:name=".SignupActivity"
+        <activity
+            android:name=".SignupActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".TeachingActivity"
-            android:screenOrientation="portrait"/>
-        <activity android:name=".SelectActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".TeachingActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectActivity"
+            android:screenOrientation="portrait" />
         <!-- <activity android:name=".SelectControlActivity" /> -->
         <!-- <activity android:name=".SelectAlbumActivity" /> -->
         <!-- <activity android:name=".SelectCountActivity" /> -->
-        <activity android:name=".AdjustLightColorActivity"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".AdjustLightColorActivity"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AdjustControlerLocaActivity"
             android:label="@string/title_activity_adjust_controler_loca"
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AdjustSoundActivity"
             android:label="@string/title_activity_adjust_sound"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
+        <activity android:name=".Begin_page">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>

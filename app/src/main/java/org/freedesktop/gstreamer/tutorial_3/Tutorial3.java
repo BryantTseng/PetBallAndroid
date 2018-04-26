@@ -88,7 +88,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
         setPage();
         ControlButtonSetting();
-        //startStreaming();
+        startStreaming();
     }
     private void cut_title(){
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -214,16 +214,20 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
 
     public void click(View v){
+        GlobalVariable gv;
         switch(v.getId()){
 
             case R.id.guide_button:
                     guide_page.setVisibility(View.INVISIBLE);
                 break;
             case R.id.led_button:
-
+                gv = (GlobalVariable)getApplicationContext();
+                new WebConnect(gv).execute("led");
                 break;
             case R.id.music_button:
-
+                gv = (GlobalVariable)getApplicationContext();
+                String s = Integer.toString(gv.getSound());
+                new WebConnect(gv).execute("music/"+s);
                 break;
             case R.id.list_button:
 
@@ -240,7 +244,7 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
                 setListPage();
                 break;
             case R.id.eat_button:
-                GlobalVariable gv = (GlobalVariable)getApplicationContext();
+                gv = (GlobalVariable)getApplicationContext();
                 new WebConnect(gv).execute("feed");
                 break;
             case R.id.sitting_button:

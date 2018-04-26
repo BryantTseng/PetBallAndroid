@@ -10,5 +10,14 @@
         sha1="6223be933fbc8d81f819aacad0ce09346d5911c4">
         <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/pre-dexed/debug/mysql-connector-java-5.1.45-bin_6b3934878cceac58be3ab1d4411f24b67f9894b2.jar" />
     </item>
+    <item
+        is-multidex="false"
+        jar="/home/will/.android/build-cache/6e6247b63499b28c1b78ff8d91f450cea0bdcba3/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.3"
+        sha1="aab8317072b8564446343a1c1f303661a2a57ab8">
+        <dex dex="/home/will/AndroidStudioProjects/PetBallAndroid/app/build/intermediates/pre-dexed/debug/classes_46eb6a3042727552a346c340076009c87a48faaa.jar" />
+    </item>
 
 </items>

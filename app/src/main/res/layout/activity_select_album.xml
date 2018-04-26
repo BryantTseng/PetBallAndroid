@@ -25,26 +25,56 @@
 
 
         </LinearLayout>
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="0dip"
+            android:layout_height="0dp"
             android:layout_weight="8.2"
             android:weightSum="8"
             android:orientation="vertical">
 
-            <GridView
+            <LinearLayout
+
+                android:id="@+id/TotalImageView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:id="@+id/myGridview"
-                android:numColumns="auto_fit"
-                android:gravity="center"
-                android:columnWidth="50pt"
-                android:stretchMode="columnWidth"/>
+                android:visibility="visible"
+                android:orientation="vertical">
+                <GridView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/myGridview"
+                    android:numColumns="4"
+                    android:gravity="left"
+                    android:columnWidth="200dp"
+                    android:stretchMode="columnWidth"
+                    />
 
-        </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+
+                android:id="@+id/OneImageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="invisible"
+                android:orientation="vertical">
 
 
+                <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent"/>
+                <ImageView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scaleType="centerInside"
+                    android:id="@+id/aloneImage"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="0dip"
