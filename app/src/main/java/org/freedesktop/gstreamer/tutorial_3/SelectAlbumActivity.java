@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.File;
@@ -31,6 +32,7 @@ public class SelectAlbumActivity extends Fragment {
     private ImageView aloneV;
     private LinearLayout totalView;
     private RelativeLayout oneView;
+    private TextView text;
     private Button backButton;
     @Override
     public void onAttach(Context context)
@@ -67,7 +69,7 @@ public class SelectAlbumActivity extends Fragment {
         aloneV = (ImageView) getActivity().findViewById(R.id.aloneImage);
         totalView = (LinearLayout)getActivity().findViewById(R.id.TotalImageView);
         oneView = (RelativeLayout)getActivity().findViewById(R.id.OneImageView);
-
+        text = (TextView)getActivity().findViewById(R.id.status);
         final List<Bitmap>MyImage =  new ArrayList<>();
 
         List<Map<String, Object>> items = new ArrayList<>();
@@ -109,6 +111,7 @@ public class SelectAlbumActivity extends Fragment {
                 totalView.setVisibility(View.INVISIBLE);
                 oneView.setVisibility(View.VISIBLE);
                 aloneV.setImageBitmap(MyImage.get(position));
+                text.setText("詳細資訊");
             }
         });
 
@@ -121,6 +124,7 @@ public class SelectAlbumActivity extends Fragment {
                 Log.i("MyAppEvent","btnEvent1 Click");
                 totalView.setVisibility(View.VISIBLE);
                 oneView.setVisibility(View.INVISIBLE);
+                text.setText("選取");
             }
         });
 
