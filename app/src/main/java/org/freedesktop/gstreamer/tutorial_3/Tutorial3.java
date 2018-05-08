@@ -236,7 +236,9 @@ public class Tutorial3 extends Activity implements SurfaceHolder.Callback{
 
             case R.id.take_pic_button:
                 control_page.setVisibility(View.INVISIBLE);
+                nativePause();
                 shareScreen();
+                nativePlay();
                 control_page.setVisibility(View.VISIBLE);
                 break;
 

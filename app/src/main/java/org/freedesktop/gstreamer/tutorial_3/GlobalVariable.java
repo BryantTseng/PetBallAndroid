@@ -7,7 +7,7 @@ import android.app.Application;
  */
 
 public class GlobalVariable extends Application {
-   private String roomii_IP = "172.20.10.5";
+   private String roomii_IP = "172.20.10.14";
    private String database_IP = "init";
    private int LoginState = 0;
    private int LightColor = 0;

@@ -21,7 +21,7 @@
             android:layout_height="match_parent"
             android:onClick="click"
             android:background="@color/transparent"
-            android:layout_margin="5dip"
+            android:layout_margin="15dip"
             android:textColor="#B5B5B6"
             android:textSize="22dp"
             android:text="跳過" />
